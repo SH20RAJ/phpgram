@@ -189,6 +189,72 @@ class PhpGram {
         return $this->request('deleteChatStickerSet', ['chat_id' => $chatId]);
     }
 
+    public function getStickerSet($name) {
+        return $this->request('getStickerSet', ['name' => $name]);
+    }
+
+    public function uploadStickerFile($userId, $pngSticker) {
+        return $this->request('uploadStickerFile', ['user_id' => $userId, 'png_sticker' => $pngSticker]);
+    }
+
+    public function createNewStickerSet($userId, $name, $title, $pngSticker, $emojis, $options = []) {
+        $params = array_merge(['user_id' => $userId, 'name' => $name, 'title' => $title, 'png_sticker' => $pngSticker, 'emojis' => $emojis], $options);
+        return $this->request('createNewStickerSet', $params);
+    }
+
+    public function addStickerToSet($userId, $name, $pngSticker, $emojis, $options = []) {
+        $params = array_merge(['user_id' => $userId, 'name' => $name, 'png_sticker' => $pngSticker, 'emojis' => $emojis], $options);
+        return $this->request('addStickerToSet', $params);
+    }
+
+    public function setStickerPositionInSet($sticker, $position) {
+        return $this->request('setStickerPositionInSet', ['sticker' => $sticker, 'position' => $position]);
+    }
+
+    public function deleteStickerFromSet($sticker) {
+        return $this->request('deleteStickerFromSet', ['sticker' => $sticker]);
+    }
+
+    public function answerInlineQuery($inlineQueryId, $results, $options = []) {
+        $params = array_merge(['inline_query_id' => $inlineQueryId, 'results' => json_encode($results)], $options);
+        return $this->request('answerInlineQuery', $params);
+    }
+
+    public function sendInvoice($chatId, $title, $description, $payload, $providerToken, $startParameter, $currency, $prices, $options = []) {
+        $params = array_merge(['chat_id' => $chatId, 'title' => $title, 'description' => $description, 'payload' => $payload, 'provider_token' => $providerToken, 'start_parameter' => $startParameter, 'currency' => $currency, 'prices' => json_encode($prices)], $options);
+        return $this->request('sendInvoice', $params);
+    }
+
+    public function answerShippingQuery($shippingQueryId, $ok, $options = []) {
+        $params = array_merge(['shipping_query_id' => $shippingQueryId, 'ok' => $ok], $options);
+        return $this->request('answerShippingQuery', $params);
+    }
+
+    public function answerPreCheckoutQuery($preCheckoutQueryId, $ok, $options = []) {
+        $params = array_merge(['pre_checkout_query_id' => $preCheckoutQueryId, 'ok' => $ok], $options);
+        return $this->request('answerPreCheckoutQuery', $params);
+    }
+
+    public function setPassportDataErrors($userId, $errors) {
+        return $this->request('setPassportDataErrors', ['user_id' => $userId, 'errors' => json_encode($errors)]);
+    }
+
+    public function sendGame($chatId, $gameShortName, $options = []) {
+        $params = array_merge(['chat_id' => $chatId, 'game_short_name' => $gameShortName], $options);
+        return $this->request('sendGame', $params);
+    }
+
+    public function setGameScore($userId, $score, $options = []) {
+        $params = array_merge(['user_id' => $userId, 'score' => $score], $options);
+        return $this->request('setGameScore', $params);
+    }
+
+    public function getGameHighScores($userId, $options = []) {
+        $params = array_merge(['user_id' => $userId], $options);
+        return $this->request('getGameHighScores', $params);
+    }
+
+
 
 }
 
