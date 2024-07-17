@@ -297,3 +297,10 @@ Contributions are welcome! Fork the repository, make your changes, and submit a 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/SH20RAJ/phpgram/blob/main/LICENSE) file for details.
+
+---
+
+### Important Links
+
+> https://dev.to/sh20raj/how-to-create-a-telegram-bot-using-php-4hbd
+> https://dev.to/sh20raj/phpgram-a-php-library-for-interacting-with-the-telegram-bot-api-3pip
