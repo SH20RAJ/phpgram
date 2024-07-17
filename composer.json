@@ -1,0 +1,24 @@
+{
+    "name": "sh20raj/phpgram",
+    "description": "A PHP library for interacting with the Telegram Bot API.",
+    "keywords": ["php", "telegram", "bot", "api"],
+    "homepage": "https://github.com/SH20RAJ/phpgram",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shashwat Raj",
+            "email": "sh20raj@gmail.com",
+            "homepage": "https://github.com/SH20RAJ",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpGram\\": "src/"
+        }
+    }
+}
