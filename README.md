@@ -4,6 +4,8 @@
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%207.0-8892BF.svg)](https://www.php.net/)
 [![Telegram Bot API](https://img.shields.io/badge/Telegram%20Bot%20API-%3E%3D%205.0-0088cc.svg)](https://core.telegram.org/bots/api)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fphpgram&labelColor=%232ccce4&countColor=%23f47373&style=flat-square)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fphpgram)
+[![Latest Stable Version](https://img.shields.io/packagist/v/sh20raj/phpgram.svg?style=flat-square)](https://packagist.org/packages/sh20raj/phpgram)
+
 
 PhpGram is a PHP library for interacting with the Telegram Bot API, providing easy-to-use methods for sending messages, media, managing chats, stickers, inline queries, payments, and more.
 
@@ -24,7 +26,7 @@ PhpGram is a PHP library for interacting with the Telegram Bot API, providing ea
 
 ## Installation
 
-Install PhpGram via Composer:
+Install PhpGram via [Composer](https://packagist.org/packages/sh20raj/phpgram):
 
 ```bash
 composer require sh20raj/phpgram
