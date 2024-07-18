@@ -45,7 +45,9 @@ git clone https://github.com/SH20RAJ/phpgram.git
 First, include the library in your PHP file and initialize `PhpGram` with your bot token:
 
 ```php
-require_once 'path/to/phpgram.php';
+require __DIR__ . '/../src/PhpGram.php';
+
+use PhpGram\PhpGram;
 
 $token = 'YOUR_BOT_TOKEN';
 $bot = new PhpGram($token);
