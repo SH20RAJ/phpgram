@@ -53,6 +53,8 @@ $bot = new PhpGram($token);
 
 ### Basic Usage
 
+> Try Example: [Toss Bot](./examples/tossbot.php) (Toss a coin and get the result or roll a dice)
+
 ```php
 // Example: Get bot information
 $botInfo = $bot->getMe();
